@@ -12,7 +12,11 @@ public class Road {
         this.occupied = occupied;
     }
 
-    public boolean[] getOccupied() {
-        return this.occupied;
+    public boolean isValid(int position) {
+        return 0 <= position && position < occupied.length;
+    }
+
+    public boolean isOccupied(int position) {
+        return occupied[position];
     }
 }
